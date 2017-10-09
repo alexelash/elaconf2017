@@ -27,3 +27,8 @@
 	background: -ms-radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
 	background: radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
 }
+
+@mixin angle-gradient( $stop1, $stop2, $stop3, $stop4, $stop5 ) {
+	background: $stop1;
+	background: linear-gradient(135deg, $stop1 0%, $stop2 23%, $stop3 50%, $stop4 79%, $stop5 100%);
+}

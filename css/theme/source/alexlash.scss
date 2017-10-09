@@ -1,0 +1,145 @@
+/**
+ * Black theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #283546;
+
+// Primary/body text
+$mainFont: "Gotham Narrow SSm A", "Gotham Narrow SSm B", sans-serif;
+$mainFontSize: 35px;
+$mainColor: #eee;
+
+// Vertical spacing between blocks of text
+$blockMargin: 20px;
+
+// Headings
+
+$linkColor: #e7ad52;
+$linkColorHover: lighten( $linkColor, 20% );
+$headingFont: "Sentinel SSm A", "Sentinel SSm B", serif;
+$headingLineHeight: 1.2;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingTextShadow: 0px 0px 20px rgba(#455D7A, .5);
+$headingFontWeight: 800;
+
+$heading1Size: 3.25em;
+$heading2Size: 2.25em;
+$heading3Size: 1.5em;
+$heading4Size: 1.00em;
+
+$selectionBackgroundColor: rgba(175, 65, 190, 0.65);
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+section {
+  flex-direction: column;
+}
+
+.slide {
+  transition: outline-color 1s, background 2s!important;
+}
+
+footer {
+  position: absolute;
+  left: 0; bottom: 0; right: 0;
+  display: flex!important;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 999;
+
+  p {
+    font-size: 0.5em!important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 20px rgba(#455D7A, .5)
+  }
+
+  .twitter {
+    display: flex;
+    align-items: center;
+    text-shadow: 0px 0px 20px rgba(#455D7A, .5)
+
+    .icon {
+      padding: 5px;
+
+      svg {
+        fill: white;
+        height: $mainFontSize;
+        width: $mainFontSize;
+      }
+    }
+  }
+}
+
+.title .slide {
+  @include angle-gradient(#AF2BBF,#A14EBF,#6C91BF,#5FB0B7,#5BC8AF);
+  outline: 10px solid #A14EBF;
+  outline-color: #A14EBF;
+  outline-offset: -10px;
+}
+
+.title-secondary .slide {
+  // @include angle-gradient(#164736,#1C5B45,#1F654D,#1C5B45,#164736);
+  @include angle-gradient(#508FE0,#4982CC,#4982CC,#4982CC,#508FE0);
+  outline: 10px solid #bd4ebf;
+  outline-color: #bd4ebf;
+  outline-offset: -10px;
+}
+
+.happy-photo {
+  .slide {
+    background: url(../../img/me-happy-computer.jpg) no-repeat center;
+    background-size: cover;
+  }
+  h1,h2,h3,h4,h5 {
+    color: black!important;
+  }
+}
+.happy-coffee {
+  .slide {
+    background: url(../../img/me-coffee.jpg) no-repeat center;
+    background-size: cover;
+  }
+  h1,h2,h3,h4,h5 {
+    color: black!important;
+  }
+}
+
+.pop .slide {
+  @include angle-gradient(#bd4ebf,#bf4ea5,#c661af,#bd4ebf,#bf4ea5);
+}
+
+.number {
+  font-size: 0.75em!important;
+  background-color: #bd4ebf;
+  border: 10px solid #c088d4!important;
+  align-self: center;
+  width: 1em;
+  height: 1em;
+  line-height: 1!important;
+  padding: 10px!important;
+  border-radius: 100%;
+  text-shadow: 0px 0px 10px rgba(#455D7A, .5)
+}
+
+
+
