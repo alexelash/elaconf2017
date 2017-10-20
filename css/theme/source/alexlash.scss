@@ -19,7 +19,7 @@
 $backgroundColor: #283546;
 
 // Primary/body text
-$mainFont: "Gotham Narrow SSm A", "Gotham Narrow SSm B", sans-serif;
+$mainFont: "Gotham Narrow SSm A", "Gotham Narrow SSm B", Gotham, sans-serif;
 $mainFontSize: 35px;
 $mainColor: #eee;
 
@@ -30,7 +30,7 @@ $blockMargin: 20px;
 
 $linkColor: #e7ad52;
 $linkColorHover: lighten( $linkColor, 20% );
-$headingFont: "Sentinel SSm A", "Sentinel SSm B", serif;
+$headingFont: "Sentinel SSm A", "Sentinel SSm B", Sentinel, serif;
 $headingLineHeight: 1.2;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
@@ -70,13 +70,13 @@ footer {
     font-size: 0.5em!important;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0px 0px 20px rgba(#455D7A, .5)
+    text-shadow: 0px 0px 20px rgba(#455D7A, .5);
   }
 
   .twitter {
     display: flex;
     align-items: center;
-    text-shadow: 0px 0px 20px rgba(#455D7A, .5)
+    text-shadow: 0px 0px 20px rgba(#455D7A, .5);
 
     .icon {
       padding: 5px;
@@ -90,41 +90,21 @@ footer {
   }
 }
 
-.title .slide {
+.title body {
   @include angle-gradient(#AF2BBF,#A14EBF,#6C91BF,#5FB0B7,#5BC8AF);
   outline: 10px solid #A14EBF;
   outline-color: #A14EBF;
   outline-offset: -10px;
 }
 
-.title-secondary .slide {
+.title-secondary body {
   // @include angle-gradient(#164736,#1C5B45,#1F654D,#1C5B45,#164736);
   @include angle-gradient(#508FE0,#4982CC,#4982CC,#4982CC,#508FE0);
   outline: 10px solid #bd4ebf;
   outline-color: #bd4ebf;
   outline-offset: -10px;
 }
-
-.happy-photo {
-  .slide {
-    background: url(../../img/me-happy-computer.jpg) no-repeat center;
-    background-size: cover;
-  }
-  h1,h2,h3,h4,h5 {
-    color: black!important;
-  }
-}
-.happy-coffee {
-  .slide {
-    background: url(../../img/me-coffee.jpg) no-repeat center;
-    background-size: cover;
-  }
-  h1,h2,h3,h4,h5 {
-    color: black!important;
-  }
-}
-
-.pop .slide {
+.pop body {
   @include angle-gradient(#bd4ebf,#bf4ea5,#c661af,#bd4ebf,#bf4ea5);
 }
 
@@ -138,8 +118,15 @@ footer {
   line-height: 1!important;
   padding: 10px!important;
   border-radius: 100%;
-  text-shadow: 0px 0px 10px rgba(#455D7A, .5)
+  text-shadow: 0px 0px 10px rgba(#455D7A, 0.5);
+}
+.reveal section img {
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
-
+.reveal ol, .reveal ul, .reveal dl {
+  margin: 0 auto;
+}
 

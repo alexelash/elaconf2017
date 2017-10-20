@@ -12,7 +12,7 @@ body {
   background-color: #283546; }
 
 .reveal {
-  font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", sans-serif;
+  font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", Gotham, sans-serif;
   font-size: 35px;
   font-weight: normal;
   color: #eee; }
@@ -43,7 +43,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #eee;
-  font-family: "Sentinel SSm A", "Sentinel SSm B", serif;
+  font-family: "Sentinel SSm A", "Sentinel SSm B", Sentinel, serif;
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: normal;
@@ -310,7 +310,8 @@ footer {
     text-shadow: 0px 0px 20px rgba(69, 93, 122, 0.5); }
   footer .twitter {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    text-shadow: 0px 0px 20px rgba(69, 93, 122, 0.5); }
     footer .twitter .icon {
       padding: 5px; }
       footer .twitter .icon svg {
@@ -318,35 +319,21 @@ footer {
         height: 35px;
         width: 35px; }
 
-.title .slide {
+.title body {
   background: #AF2BBF;
   background: linear-gradient(135deg, #AF2BBF 0%, #A14EBF 23%, #6C91BF 50%, #5FB0B7 79%, #5BC8AF 100%);
   outline: 10px solid #A14EBF;
   outline-color: #A14EBF;
   outline-offset: -10px; }
 
-.title-secondary .slide {
+.title-secondary body {
   background: #508FE0;
   background: linear-gradient(135deg, #508FE0 0%, #4982CC 23%, #4982CC 50%, #4982CC 79%, #508FE0 100%);
   outline: 10px solid #bd4ebf;
   outline-color: #bd4ebf;
   outline-offset: -10px; }
 
-.happy-photo .slide {
-  background: url(../../img/me-happy-computer.jpg) no-repeat center;
-  background-size: cover; }
-
-.happy-photo h1, .happy-photo h2, .happy-photo h3, .happy-photo h4, .happy-photo h5 {
-  color: black !important; }
-
-.happy-coffee .slide {
-  background: url(../../img/me-coffee.jpg) no-repeat center;
-  background-size: cover; }
-
-.happy-coffee h1, .happy-coffee h2, .happy-coffee h3, .happy-coffee h4, .happy-coffee h5 {
-  color: black !important; }
-
-.pop .slide {
+.pop body {
   background: #bd4ebf;
   background: linear-gradient(135deg, #bd4ebf 0%, #bf4ea5 23%, #c661af 50%, #bd4ebf 79%, #bf4ea5 100%); }
 
@@ -361,3 +348,11 @@ footer {
   padding: 10px !important;
   border-radius: 100%;
   text-shadow: 0px 0px 10px rgba(69, 93, 122, 0.5); }
+
+.reveal section img {
+  background: transparent;
+  border: none;
+  box-shadow: none; }
+
+.reveal ol, .reveal ul, .reveal dl {
+  margin: 0 auto; }
