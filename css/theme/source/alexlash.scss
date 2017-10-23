@@ -16,12 +16,12 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #283546;
+$backgroundColor: #9e4557;
 
 // Primary/body text
-$mainFont: "Gotham Narrow SSm A", "Gotham Narrow SSm B", Gotham, sans-serif;
+$mainFont: "Sentinel SSm A", "Sentinel SSm B", Sentinel, serif;
 $mainFontSize: 35px;
-$mainColor: #eee;
+$mainColor: #4C212A;
 
 // Vertical spacing between blocks of text
 $blockMargin: 20px;
@@ -31,18 +31,19 @@ $blockMargin: 20px;
 $linkColor: #e7ad52;
 $linkColorHover: lighten( $linkColor, 20% );
 $headingFont: "Sentinel SSm A", "Sentinel SSm B", Sentinel, serif;
+$headingColor: #4C212A;
 $headingLineHeight: 1.2;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
-$headingTextShadow: 0px 0px 20px rgba(#455D7A, .5);
+$headingTextShadow: none;
 $headingFontWeight: 800;
 
-$heading1Size: 3.25em;
+$heading1Size: 2.85em;
 $heading2Size: 2.25em;
-$heading3Size: 1.5em;
+$heading3Size: 1.85em;
 $heading4Size: 1.00em;
 
-$selectionBackgroundColor: rgba(175, 65, 190, 0.65);
+$selectionBackgroundColor: $mainColor;
 
 
 // Theme template ------------------------------
@@ -67,22 +68,23 @@ footer {
   z-index: 999;
 
   p {
+    font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", Gotham, sans-serif!important;
     font-size: 0.5em!important;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0px 0px 20px rgba(#455D7A, .5);
+    text-shadow: none;
   }
 
   .twitter {
     display: flex;
     align-items: center;
-    text-shadow: 0px 0px 20px rgba(#455D7A, .5);
+    text-shadow: none;
 
     .icon {
-      padding: 5px;
+      padding: 5px 0 5px 5px;
 
       svg {
-        fill: white;
+        fill: $mainColor;
         height: $mainFontSize;
         width: $mainFontSize;
       }
@@ -91,61 +93,104 @@ footer {
 }
 
 .title body {
-  @include angle-gradient(#AF2BBF,#A14EBF,#6C91BF,#5FB0B7,#5BC8AF);
-  outline: 10px solid #A14EBF;
-  outline-color: #A14EBF;
+  background: $backgroundColor;
+  outline: 2px solid $mainColor;
+  outline-color: $mainColor;
   outline-offset: -10px;
+}
+.title-sub body {
+  background: $mainColor;
+  outline: 2px solid $backgroundColor;
+  outline-color: $backgroundColor;
+  outline-offset: -10px;
+
+  p {
+    color: $backgroundColor;
+  }
+  h1, h2, h3, h4, h5 {
+    color: $backgroundColor;
+  }
+  .twitter {
+    .icon {
+      svg {
+        fill: $backgroundColor;
+      }
+    }
+  }
+}
+.point body {
+  background: #61a397 url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237ebaae' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  outline: 2px solid #26413C;
+  outline-color: #26413C;
+  outline-offset: -10px;
+
+  p {
+    color: #26413C;
+  }
+  h1, h2, h3, h4, h5 {
+    color: #26413C;
+  }
+  .twitter {
+    .icon {
+      svg {
+        fill: #26413C;
+      }
+    }
+  }
 }
 
-.title-secondary body {
-  // @include angle-gradient(#164736,#1C5B45,#1F654D,#1C5B45,#164736);
-  @include angle-gradient(#508FE0,#4982CC,#4982CC,#4982CC,#508FE0);
-  outline: 10px solid #508FE0;
-  outline-color: #508FE0;
+.point-sub body {
+  background: #26413C;
+  outline: 2px solid #61a397;
+  outline-color: #61a397;
   outline-offset: -10px;
-}
-.pop body {
-  @include angle-gradient(#bd4ebf,#bf4ea5,#c661af,#bd4ebf,#bf4ea5);
-  outline: 10px solid #bd4ebf;
-  outline-color: #bd4ebf;
-  outline-offset: -10px;
-}
 
-.uber body {
-  background: url(/img/uber-logo.svg) repeat center center;
-  background-size: 30px 30px;
-  outline: 10px solid #508FE0;
-  outline-color: #508FE0;
-  outline-offset: -10px;
-}
-.uber body:after {
-  content: "";
-  @include angle-gradient(#508FE0,#4982CC,#4982CC,#4982CC,#508FE0);
-  display: block;
-  top:0;right:0;bottom:0;left:0;
-  position: absolute;
-  opacity: 0.95;
+  p {
+    color: #61a397;
+  }
+  h1, h2, h3, h4, h5 {
+    color: #61a397;
+  }
+  .twitter {
+    .icon {
+      svg {
+        fill: #61a397;
+      }
+    }
+  }
 }
 
 .number {
   font-size: 0.75em!important;
-  background-color: #bd4ebf;
-  border: 10px solid #c088d4!important;
+  border: 2px solid #26413C!important;
   align-self: center;
   width: 1em;
   height: 1em;
   line-height: 1!important;
   padding: 10px!important;
-  border-radius: 100%;
-  text-shadow: 0px 0px 10px rgba(#455D7A, 0.5);
+  position: absolute;
+  top: -25%;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: lighten(#61a397, 4);
+    top: -5px; right: -5px; bottom: 5px; left: 5px;
+    z-index: -1;
+  }
 }
 .reveal section img {
   background: transparent;
   border: none;
   box-shadow: none;
+  margin-top: -100px;
 }
 
 .reveal ol, .reveal ul, .reveal dl {
   margin: 0 auto;
 }
 
+.toxic body {
+  background: $backgroundColor url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237b3543' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
