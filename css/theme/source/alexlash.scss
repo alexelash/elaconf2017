@@ -16,12 +16,12 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #9e4557;
+$backgroundColor: #C06F80;
 
 // Primary/body text
 $mainFont: "Sentinel SSm A", "Sentinel SSm B", Sentinel, serif;
 $mainFontSize: 35px;
-$mainColor: #4C212A;
+$mainColor: #31151b;
 
 // Vertical spacing between blocks of text
 $blockMargin: 20px;
@@ -31,7 +31,7 @@ $blockMargin: 20px;
 $linkColor: #e7ad52;
 $linkColorHover: lighten( $linkColor, 20% );
 $headingFont: "Sentinel SSm A", "Sentinel SSm B", Sentinel, serif;
-$headingColor: #4C212A;
+$headingColor: #31151b;
 $headingLineHeight: 1.2;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
@@ -94,14 +94,14 @@ footer {
 
 .title body {
   background: $backgroundColor;
-  outline: 2px solid $mainColor;
-  outline-color: $mainColor;
+  outline: 2px solid #af4d61;
+  outline-color: #8f3e4f;
   outline-offset: -10px;
 }
 .title-sub body {
   background: $mainColor;
-  outline: 2px solid $backgroundColor;
-  outline-color: $backgroundColor;
+  outline: 2px solid #af4d61;
+  outline-color: #af4d61;
   outline-offset: -10px;
 
   p {
@@ -118,29 +118,31 @@ footer {
     }
   }
 }
+
+
 .point body {
-  background: #61a397 url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237ebaae' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  outline: 2px solid #26413C;
-  outline-color: #26413C;
+  background: #91bfb7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2361a397' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  outline: 2px solid #1F3330;
+  outline-color: #1F3330;
   outline-offset: -10px;
 
   p {
-    color: #26413C;
+    color: #1F3330;
   }
   h1, h2, h3, h4, h5 {
-    color: #26413C;
+    color: #1F3330;
   }
   .twitter {
     .icon {
       svg {
-        fill: #26413C;
+        fill: #1F3330;
       }
     }
   }
 }
 
 .point-sub body {
-  background: #26413C;
+  background: #1F3330;
   outline: 2px solid #61a397;
   outline-color: #61a397;
   outline-offset: -10px;
@@ -183,7 +185,7 @@ footer {
 
 .number {
   font-size: 0.75em!important;
-  border: 2px solid #26413C!important;
+  border: 2px solid #1F3330!important;
   align-self: center;
   width: 1em;
   height: 1em;
@@ -212,7 +214,8 @@ footer {
   margin: 0 auto;
 }
 
+.intro body,
 .toxic body,
 .thanks body {
-  background: $backgroundColor url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237b3543' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background: $backgroundColor url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d0929f' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
