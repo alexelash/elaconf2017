@@ -1,6 +1,8 @@
 # Is it me? 
 A talk for ELAConf 2017 built with reveal.js [![Build Status](https://travis-ci.org/hakimel/reveal.js.svg?branch=master)](https://travis-ci.org/hakimel/reveal.js)
 
+[Slides.](https://alexelash.github.io/elaconf2017/)
+
 ## Abstract
 Even though we spend the majority of our time working—or maybe because of it—identifying a work environment as detrimental to self-worth and a healthy work/life balance is difficult. Whether harassed by coworkers, demeaned by a demanding boss, or a part of a culture that conflates hard work with working 24/7, it can be difficult to make the distinction between the ups-and-downs that accompany working life and legitimately toxic surroundings. Not identifying this early enough can lead to burnout, a questionably short tenure on your resume, or lasting self-doubt.  
 
